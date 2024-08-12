@@ -752,11 +752,9 @@ https://<PUBLIC_IP>
 
 Note: Your browser will likely show a security warning because we're using a self-signed certificate. In a production environment, you would use a certificate from a trusted Certificate Authority.
 
-[Placeholder for screenshot: Browser showing the NGINX Plus welcome page over HTTPS with a security warning due to the self-signed certificate]
+![Demo application](images/4_qs_html.png)
 
 This completes our tutorial on building and deploying NGINX Plus ARM64 containers on AWS ECS Fargate. You've successfully set up the AWS environment, built a custom NGINX Plus image, deployed it to ECS Fargate, and verified HTTPS connectivity to multiple container instances.
 
 Remember to clean up your AWS resources when you're done to avoid unnecessary charges.
 
-For more information on specifying sensitive data using secrets in your Amazon ECS task definitions, refer to the AWS documentation:
-https://docs.aws.amazon.com/AmazonECS/latest/developerguide/specifying-sensitive-data-secrets.html
