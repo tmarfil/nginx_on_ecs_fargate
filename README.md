@@ -1,4 +1,4 @@
-# Deploying NGINX Plus on AWS ECS Fargate with Graviton ARM64
+# Deploying NGINX Plus Graviton-powerd containers as AWS ECS Fargate Tasks
 
 This tutorial guides you through deploying NGINX Plus on Amazon Web Services (AWS) Elastic Container Service (ECS) Fargate using Graviton ARM64 instances. We'll explore how these technologies work together to create a powerful, cost-effective infrastructure for your web applications.
 
