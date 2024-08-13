@@ -759,7 +759,7 @@ After creating the service, you can verify that the container is running in the 
 2. Navigate to the Amazon ECS Service
 3. In the left sidebar, click on "Clusters"
 4. Click on the "my-ecs-cluster" that you created
-5. In the "Services" tab, you should see your "my-fargate-arm-task" service
+5. In the "Services" tab, you should see your "my-fargate-task" service
 6. Click on the service name to view details
 7. In the "Tasks" tab, you should see your running task
 
