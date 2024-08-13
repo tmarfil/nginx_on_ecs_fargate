@@ -562,7 +562,7 @@ POLICY_ARN=$(aws iam list-policies --query 'Policies[?PolicyName==`MySecretAcces
 echo MySecretAccessPolicy ARN: $POLICY_ARN
 ```
 
-#### 1.3 Create MyECSTaskExecutionRole role
+#### 1.3 Create MyECSTaskExecutionRole
 
 ```bash
 aws iam create-role --role-name MyECSTaskExecutionRole --assume-role-policy-document '{
@@ -590,7 +590,7 @@ aws iam attach-role-policy \
     --policy-arn arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy
 ```
 
-#### 1.4 Create MyECSTask role
+#### 1.4 Create MyECSTaskRole
 
 ```bash
 aws iam create-role --role-name MyECSTaskRole --assume-role-policy-document '{
