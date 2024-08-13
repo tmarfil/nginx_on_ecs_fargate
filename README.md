@@ -12,7 +12,7 @@ This tutorial leverages several AWS technologies:
 - **ECS (Elastic Container Service)**: A fully managed container orchestration service.
 - **Fargate**: A serverless compute engine for containers, eliminating the need to provision and manage servers.
 - **ECR (Elastic Container Registry)**: A fully managed container registry for storing, managing, and deploying container images.
-- **AWS Secrets Manager**: Securely stores and manages sensitive information like SSL/TLS certificates and private keys.
+- **AWS Secrets Manager**: Securely stores and manages sensitive information like TLS certificates and private keys.
 
 While this tutorial doesn't cover it, [NGINX Plus can send logs to CloudWatch](https://aws.amazon.com/blogs/mt/use-amazon-cloudwatch-contributor-insights-for-general-analysis-of-nginx-logs/).
 
@@ -229,9 +229,9 @@ aws ec2 associate-iam-instance-profile --instance-id $INSTANCE_ID --iam-instance
 
 #### 2.1. Sign up for NGINX Plus trial
 
-Sign up for an NGINX Plus trial at https://www.f5.com/trials. After signing up, you'll receivea JSON Web Token (JWT) to authenticate to private-registry.nginx.com. 
+Sign up for an NGINX Plus trial at https://www.f5.com/trials. After signing up, you'll receive a JSON Web Token (JWT) to authenticate to private-registry.nginx.com. 
 
-If you are an existing F5 customer, you can request trial from the https://my.f5.com portal.
+If you are an existing F5 customer, you can request a trial from the https://my.f5.com portal.
 
 #### 2.2. Connect to the Amazon Linux 2023 instance
 
@@ -243,7 +243,7 @@ ssh -i /path/to/your/key.pem ec2-user@$PUBLIC_IP
 
 #### 2.3. Set up Docker for NGINX Plus container registry
 
-Set up Docker to communicate with the NGINX Container Registry located at private-registry.nginx.com.
+Set up Docker to communicate with the NGINX container registry located at private-registry.nginx.com.
 
 Open the JSON Web Token file previously downloaded from MyF5 customer portal (for example, nginx-repo-12345abc.jwt) and copy its contents.
 
