@@ -1,3 +1,24 @@
+# Deploying NGINX Plus on AWS ECS Fargate with Graviton ARM64
+
+This tutorial guides you through deploying NGINX Plus on Amazon Web Services (AWS) Elastic Container Service (ECS) Fargate using Graviton ARM64 instances. We'll explore how these technologies work together to create a powerful, cost-effective infrastructure for your web applications.
+
+## Introduction
+
+[NGINX Plus](https://www.f5.com/go/faq/nginx-faq), the commercial version of the popular open-source NGINX reverse proxy / Kubernetes ingress / application server, offers advanced features crucial for modern cloud architectures. NGINX Plus can effectively replace Amazon's native load balancers and serve as a more feature-rich alternative to Elastic Kubernetes Services Ingress. Its versatility supports all cloud-native design patterns and seamlessly integrates with the AWS ecosystem.
+
+This tutorial leverages several AWS technologies:
+
+- [**Graviton ARM64 instances**](https://aws.amazon.com/ec2/graviton/resources/): These offer a significant price-performance advantage over x86 instance types in AWS.
+- **ECS (Elastic Container Service)**: A fully managed container orchestration service.
+- **Fargate**: A serverless compute engine for containers, eliminating the need to provision and manage servers.
+- **ECR (Elastic Container Registry)**: A fully managed container registry for storing, managing, and deploying container images.
+- **AWS Secrets Manager**: Securely stores and manages sensitive information like SSL/TLS certificates and private keys.
+
+While this tutorial doesn't cover it, [NGINX Plus can send logs to CloudWatch](https://aws.amazon.com/blogs/mt/use-amazon-cloudwatch-contributor-insights-for-general-analysis-of-nginx-logs/).
+
+By the end of this guide, you'll have a solid understanding of how to deploy NGINX Plus on AWS ECS Fargate, leveraging the [power of ARM64 architecture for better price performance](https://www.aboutamazon.com/news/aws/graviton4-aws-cloud-computing-chip).
+
+
 ## Part 1: Prepare AWS Environment
 
 AWS Command Line version tested:
