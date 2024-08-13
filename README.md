@@ -16,7 +16,7 @@ This tutorial leverages several AWS technologies:
 
 While this tutorial doesn't cover it, [NGINX Plus can send logs to CloudWatch](https://aws.amazon.com/blogs/mt/use-amazon-cloudwatch-contributor-insights-for-general-analysis-of-nginx-logs/).
 
-By the end of this guide, you'll have a solid understanding of how to deploy NGINX Plus on AWS ECS [Graviton-powered clusters](https://www.aboutamazon.com/news/aws/graviton4-aws-cloud-computing-chip).
+By the end of this guide, you'll have a solid understanding of how to configure, deploy, and quickly scale NGINX Plus on AWS ECS [Graviton-powered clusters](https://www.aboutamazon.com/news/aws/graviton4-aws-cloud-computing-chip).
 
 
 ## Part 1: Prepare AWS Environment
@@ -772,7 +772,7 @@ To manually scale your service from one container to two, use the following comm
 ```bash
 aws ecs update-service --cluster my-ecs-cluster --service my-fargate-service --desired-count 2
 ```
-When you create or scale an ECS Service with multiple subnets specified in the network configuration, ECS uses a round-robin strategy to distribute tasks across the available subnets. This distribution helps to improve availability and fault tolerance of your application.
+When you create or scale an ECS Service with multiple subnets specified in the network configuration, ECS uses a round-robin strategy to distribute tasks across the available subnets. In our example, the subnets were spread across different Availability Zones. This distribution helps to improve the availability and fault tolerance of your application.
 
 To view the current distribution of your tasks:
 
