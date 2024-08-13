@@ -779,3 +779,4 @@ This completes our tutorial on building and deploying NGINX Plus ARM64 container
 
 Remember to clean up your AWS resources when you're done to avoid unnecessary charges.
 
+> **Note** > [NGINX App Protect,](https://www.f5.com/products/nginx/nginx-app-protect) the NGINX Web Application Firewall, is only available for x86 as of August 2024.
