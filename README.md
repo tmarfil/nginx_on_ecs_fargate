@@ -633,9 +633,9 @@ aws iam attach-role-policy --role-name MyECSTaskRole --policy-arn $POLICY_ARN
 ```
 
 > **Note**
-> Understanding the difference between `ECSTaskExecutionRole` and `ECSTaskRole` is crucial for proper security configuration in ECS.
+> Understanding the difference between `MyECSTaskExecutionRole` and `MyECSTaskRole` is crucial for proper security configuration in ECS.
 
-- ECSTaskExecutionRole:
+- MyECSTaskExecutionRole:
    - Used by the ECS agent to launch and manage the container.
    - Grants permissions to:
      - Pull container images from ECR
@@ -645,13 +645,13 @@ aws iam attach-role-policy --role-name MyECSTaskRole --policy-arn $POLICY_ARN
      - AmazonECSTaskExecutionRolePolicy (AWS managed policy)
      - Custom policy to access our specific secret in Secrets Manager
 
-- ECSTaskRole:
+- MyECSTaskRole:
    - Used by the application running inside the container.
    - Grants permissions for the application to interact with other AWS services.
    - In our setup, it has:
      - Custom policy to access our specific secret in Secrets Manager
 
-The separation of these roles adheres to the principle of least privilege. The ECSTaskExecutionRole has the minimum permissions needed to start and run the container, while the ECSTaskRole has only the permissions required by the application itself. This separation enhances security by limiting the potential impact of a compromised container.
+The separation of these roles adheres to the principle of least privilege. The MyECSTaskExecutionRole has the minimum permissions needed to start and run the container, while the MyECSTaskRole has only the permissions required by the application itself. This separation enhances security by limiting the potential impact of a compromised container.
 
 ECSTaskExecurionRole can be locked down further in your environment to restrict access to specific resources such as your ECR Registry and CloudWatch Log Group.
 
