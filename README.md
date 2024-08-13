@@ -264,7 +264,7 @@ aws ecr list-images --repository-name my-nginx-repo
 
 #### 3.1 Create and store ECDSA certificate and key as AWS secret
 
-Before we create the ECS Fargate Service, we need to generate an ECDSA certificate and key, and store them in AWS Secrets Manager. This secret will be used by the `fetch_and_setup_tls.sh` script in our container.
+Before we create the ECS Service, we need to generate an ECDSA certificate and key, and store them in AWS Secrets Manager. This secret will be used by the `fetch_and_setup_tls.sh` script in our container.
 
 ```bash
 # Generate the private key:
@@ -611,7 +611,7 @@ aws iam create-role --role-name MyECSTaskRole --assume-role-policy-document '{
 aws iam attach-role-policy --role-name MyECSTaskRole --policy-arn $POLICY_ARN
 ```
 
-### 2. Create and Launch the ECS Fargate Service
+### 2. Create and Launch the ECS Service
 
 #### 2.1 Create an ECS Cluster
 
@@ -692,9 +692,9 @@ Register the task definition with ECS:
 aws ecs register-task-definition --cli-input-json file://my-fargate-task.json
 ```
 
-#### 2.5. Create an ECS Fargate Service
+#### 2.5. Create an ECS Service
 
-Now, create an ECS Fargate Service to run and maintain your desired number of tasks:
+Now, create an ECS Service to run and maintain your desired number of tasks:
 
 ```bash
 aws ecs create-service \
@@ -712,7 +712,7 @@ Replace `$SUBNET1_ID`, `$SUBNET2_ID`, and `$SECURITY_GROUP_ID` with your actual 
 After creating the service, you can verify that the container is running in the AWS Management Console:
 
 1. Log in to the AWS Management Console
-2. Navigate to the Amazon ECS Fargate Service
+2. Navigate to the Amazon ECS Service
 3. In the left sidebar, click on "Clusters"
 4. Click on the "my-ecs-cluster" that you created
 5. In the "Services" tab, you should see your "my-fargate-arm-task" service
@@ -721,14 +721,14 @@ After creating the service, you can verify that the container is running in the 
 
 ![AWS VPC Environment](images/2_ecs_service.png)
 
-#### 2.6. Scaling ECS Fargate Services across multiple tasks
+#### 2.6. Scaling ECS Services across multiple tasks
 
 To manually scale your service from one container to two, use the following command:
 
 ```bash
 aws ecs update-service --cluster my-ecs-cluster --service my-fargate-service --desired-count 2
 ```
-When you create or scale an ECS Fargate Service with multiple subnets specified in the network configuration, ECS uses a round-robin strategy to distribute tasks across the available subnets. This distribution helps to improve availability and fault tolerance of your application.
+When you create or scale an ECS Service with multiple subnets specified in the network configuration, ECS uses a round-robin strategy to distribute tasks across the available subnets. This distribution helps to improve availability and fault tolerance of your application.
 
 To view the current distribution of your tasks:
 
@@ -744,7 +744,7 @@ aws ecs describe-tasks --cluster my-ecs-cluster --tasks <task-id>
 
 #### 2.7. Test the demo application
 
-After scaling your ECS Fargate Service to two containers, let's verify that both are accessible via HTTPS. To access the web pages in a browser, simply enter the HTTPS URL with the public IP
+After scaling your ECS Service to two containers, let's verify that both are accessible via HTTPS. To access the web pages in a browser, simply enter the HTTPS URL with the public IP
 
 ```
 https://<PUBLIC_IP>
