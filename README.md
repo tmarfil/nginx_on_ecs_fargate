@@ -16,7 +16,7 @@ This tutorial leverages several AWS technologies:
 
 While this tutorial doesn't cover it, [NGINX Plus can send logs to CloudWatch](https://aws.amazon.com/blogs/mt/use-amazon-cloudwatch-contributor-insights-for-general-analysis-of-nginx-logs/).
 
-By the end of this guide, you'll have a solid understanding of how to deploy NGINX Plus on AWS ECS Fargate, leveraging the [power of Graviton for better price performance](https://www.aboutamazon.com/news/aws/graviton4-aws-cloud-computing-chip).
+By the end of this guide, you'll have a solid understanding of how to deploy NGINX Plus on AWS ECS Fargate, leveraging the [power of Graviton for a better price-performance ratio](https://www.aboutamazon.com/news/aws/graviton4-aws-cloud-computing-chip).
 
 
 ## Part 1: Prepare AWS Environment
