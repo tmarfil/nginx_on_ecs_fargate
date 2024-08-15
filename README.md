@@ -3,7 +3,7 @@
 Amazon's new cloud computing chip, [AWS Graviton4](https://www.aboutamazon.com/news/aws/graviton4-aws-cloud-computing-chip), is now generally available (July 2024). The price-performance ratio is impressive, so understandably F5 customers in AWS are looking for solutions that run and run well on Graviton. Enter...[NGINX Plus](https://www.f5.com/go/faq/nginx-faq)! Running NGINX Plus as a containerized service on Graviton instances in AWS aligns with current best practices in cloud-native design patterns. This approach often leads to cost savings and performance gains for suitable workloads.
 
 ## Introduction
-[NGINX Plus](https://www.f5.com/go/faq/nginx-faq), the commercial version of the popular open-source NGINX reverse proxy / Kubernetes ingress / application server, offers advanced features crucial for modern cloud architectures. NGINX Plus can effectively replace Amazon's native load balancers and [serve as a more feature-rich alternative to Elastic Kubernetes Services Ingress](https://github.com/nginxinc/kubernetes-ingress). Its versatility supports all cloud-native design patterns and seamlessly integrates with the AWS ecosystem.
+**NGINX Plus**, the commercial version of the popular open-source NGINX reverse proxy / Kubernetes ingress / application server, offers advanced features crucial for modern cloud architectures. NGINX Plus can effectively replace Amazon's native load balancers and [serve as a more feature-rich alternative to Elastic Kubernetes Services Ingress](https://github.com/nginxinc/kubernetes-ingress). Its versatility supports all cloud-native design patterns and seamlessly integrates with the AWS ecosystem.
 
 This tutorial leverages several AWS technologies:
 
