@@ -1,6 +1,6 @@
 # Deploying NGINX Plus Graviton-powered containers as AWS ECS Fargate Tasks
 
-The latest AWS _EC2 R8g Graviton_ instance types have now reached [General Availability (GA)](https://aws.amazon.com/blogs/aws/aws-graviton4-based-amazon-ec2-r8g-instances-best-price-performance-in-amazon-ec2/). Running NGINX Plus as a containerized service on Graviton instances in AWS aligns with current best practices in cloud-native design patterns. This approach often leads to cost savings and performance gains for suitable workloads.
+The latest AWS EC2 R8g Graviton instance types have now reached [General Availability (GA)](https://aws.amazon.com/blogs/aws/aws-graviton4-based-amazon-ec2-r8g-instances-best-price-performance-in-amazon-ec2/). Running NGINX Plus as a containerized service on Graviton instances in AWS aligns with current best practices in cloud-native design patterns. This approach often leads to cost savings and performance gains for suitable workloads.
 
 ## Introduction
 
