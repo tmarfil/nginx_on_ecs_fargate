@@ -17,7 +17,7 @@ COPY nginx.conf /etc/nginx/nginx.conf
 COPY fetch_and_setup_tls.sh /usr/local/bin/fetch_and_setup_tls.sh
 RUN chmod +x /usr/local/bin/fetch_and_setup_tls.sh
 
-# Expose HTTP, and HTTPS ports
+# Expose HTTP and HTTPS ports
 EXPOSE 80 443
 
 # Start NGINX
