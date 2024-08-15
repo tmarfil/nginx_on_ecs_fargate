@@ -1,6 +1,6 @@
 # Deploying NGINX Plus Graviton-powered containers as AWS ECS Fargate Tasks
 
-This tutorial guides you through deploying NGINX Plus on Amazon Web Services (AWS) Elastic Container Service (ECS) Fargate using Graviton ARM64 instances. We'll explore how these technologies work together to create a powerful, cost-effective infrastructure for your web applications.
+The latest EC2 R8g Graviton instance types have now reached [General Availability (GA)](https://aws.amazon.com/blogs/aws/aws-graviton4-based-amazon-ec2-r8g-instances-best-price-performance-in-amazon-ec2/). Running NGINX Plus as a containerized service on Graviton instances in AWS aligns with current best practices in cloud-native design patterns. This approach often leads to cost savings and performance gains for suitable workloads.
 
 ## Introduction
 
@@ -13,6 +13,21 @@ This tutorial leverages several AWS technologies:
 - **Fargate**: A serverless compute engine for containers, eliminating the need to provision and manage servers.
 - **ECR (Elastic Container Registry)**: A fully managed container registry for storing, managing, and deploying container images.
 - **AWS Secrets Manager**: Securely stores and manages sensitive information like TLS certificates and private keys.
+
+What is the difference between ECS and ECS Fargate?
+
+The key difference between AWS ECS (Elastic Container Service) and AWS ECS Fargate lies in the level of infrastructure management:
+
+- AWS ECS:
+   - You manage the underlying EC2 instances that host your containers
+   - You're responsible for patching, scaling, and maintaining these instances
+
+- AWS ECS Fargate:
+   - Serverless compute engine for containers
+   - AWS manages the underlying infrastructure
+   - You only need to specify CPU and memory requirements for your containers
+
+In essence, Fargate abstracts away the server management aspect, allowing you to focus solely on your containerized applications, while standard ECS gives you more control but requires more hands-on management of the underlying infrastructure.
 
 While this tutorial doesn't cover it, [NGINX Plus can send logs to CloudWatch](https://aws.amazon.com/blogs/mt/use-amazon-cloudwatch-contributor-insights-for-general-analysis-of-nginx-logs/).
 
