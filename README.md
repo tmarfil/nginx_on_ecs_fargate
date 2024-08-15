@@ -11,7 +11,7 @@ This tutorial leverages several AWS technologies:
 - [**Graviton ARM64 instances**](https://aws.amazon.com/ec2/graviton/resources/): These offer a significant price-performance advantage over x86 instance types in AWS.
 - **ECS (Elastic Container Service)**: A fully managed container orchestration service.
 - **Fargate**: A serverless compute engine for containers, eliminating the need to provision and manage servers.
-- **ECR (Elastic Container Registry)**: A fully managed container registry for storing, managing, and deploying container images.
+- **ECR Fargate (Elastic Container Registry)**: A fully managed container registry for storing, managing, and deploying container images.
 - **AWS Secrets Manager**: Securely stores and manages sensitive information like TLS certificates and private keys.
 
 What is the difference between ECS and ECS Fargate?
