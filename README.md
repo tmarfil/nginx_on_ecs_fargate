@@ -337,7 +337,7 @@ COPY nginx.conf /etc/nginx/nginx.conf
 COPY fetch_and_setup_tls.sh /usr/local/bin/fetch_and_setup_tls.sh
 RUN chmod +x /usr/local/bin/fetch_and_setup_tls.sh
 
-# Expose HTTP, and HTTPS ports
+# Expose HTTP and HTTPS ports
 EXPOSE 80 443
 
 # Start NGINX
@@ -360,7 +360,7 @@ else
     echo "TLS_CERT_AND_KEY not found" > /tmp/log.txt
 fi
 
-# Extract the certificate and key files rom AWS_SECRET_ID
+# Extract the certificate and key files from AWS_SECRET_ID
 aws secretsmanager get-secret-value --secret-id "$AWS_SECRET_ID" \
           | jq -r '.SecretString | fromjson | .certificate' > /etc/nginx/ecdsa_certificate.pem
 
@@ -653,7 +653,7 @@ aws iam attach-role-policy --role-name MyECSTaskRole --policy-arn $POLICY_ARN
 
 The separation of these roles adheres to the principle of least privilege. The MyECSTaskExecutionRole has the minimum permissions needed to start and run the container, while the MyECSTaskRole has only the permissions required by the application itself. This separation enhances security by limiting the potential impact of a compromised container.
 
-ECSTaskExecurionRole can be locked down further in your environment to restrict access to specific resources such as your ECR Registry and CloudWatch Log Group.
+ECSTaskExecutionRole can be locked down further in your environment to restrict access to specific resources such as your ECR Registry and CloudWatch Log Group.
 
 ### 2. Create and Launch the ECS Service
 
