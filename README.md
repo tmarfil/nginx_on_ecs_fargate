@@ -1,6 +1,6 @@
 # Deploying NGINX Plus Graviton-powered containers as AWS ECS Fargate Tasks
 
-Amazon's new cloud computing chip, [AWS Graviton4](https://www.aboutamazon.com/news/aws/graviton4-aws-cloud-computing-chip), is now generally available (June 2024). Running NGINX Plus as a containerized service on Graviton instances in AWS aligns with current best practices in cloud-native design patterns. This approach often leads to cost savings and performance gains for suitable workloads.
+Amazon's new cloud computing chip, [AWS Graviton4](https://www.aboutamazon.com/news/aws/graviton4-aws-cloud-computing-chip), is now generally available (July 2024). Running NGINX Plus as a containerized service on Graviton instances in AWS aligns with current best practices in cloud-native design patterns. This approach often leads to cost savings and performance gains for suitable workloads.
 
 ## Introduction
 
