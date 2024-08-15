@@ -1,6 +1,6 @@
 # Deploying NGINX Plus Graviton-powered containers as AWS ECS Fargate Tasks
 
-The latest AWS EC2 R8g Graviton instance types have now reached [General Availability (GA)](https://aws.amazon.com/blogs/aws/aws-graviton4-based-amazon-ec2-r8g-instances-best-price-performance-in-amazon-ec2/). Running NGINX Plus as a containerized service on Graviton instances in AWS aligns with current best practices in cloud-native design patterns. This approach often leads to cost savings and performance gains for suitable workloads.
+Amazon's new cloud computing chip, [AWS Graviton4](https://www.aboutamazon.com/news/aws/graviton4-aws-cloud-computing-chip), is now generally available. Running NGINX Plus as a containerized service on Graviton instances in AWS aligns with current best practices in cloud-native design patterns. This approach often leads to cost savings and performance gains for suitable workloads.
 
 ## Introduction
 
@@ -31,8 +31,7 @@ In essence, Fargate abstracts away the server management aspect, allowing you to
 
 While this tutorial doesn't cover it, [NGINX Plus can send logs to CloudWatch](https://aws.amazon.com/blogs/mt/use-amazon-cloudwatch-contributor-insights-for-general-analysis-of-nginx-logs/).
 
-By the end of this guide, you'll have a solid understanding of how to configure, deploy, and quickly scale NGINX Plus on AWS ECS [Graviton-powered clusters](https://www.aboutamazon.com/news/aws/graviton4-aws-cloud-computing-chip).
-
+By the end of this guide, you'll have a solid understanding of how to configure, deploy, and quickly scale NGINX Plus on AWS ECS Graviton.
 
 ## Part 1: Prepare AWS Environment
 
