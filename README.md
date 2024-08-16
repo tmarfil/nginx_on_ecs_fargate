@@ -1,14 +1,14 @@
-# Deploying NGINX Plus Graviton-powered containers as AWS ECS Fargate Tasks
+# Deploying F5 NGINX Plus Graviton-powered containers as AWS ECS Fargate Tasks
 
 Amazon's new cloud computing chip, [Graviton4](https://www.aboutamazon.com/news/aws/graviton4-aws-cloud-computing-chip), is now generally available (July 2024). The price-performance ratio is impressive. Understandably, cloud architects are looking for solutions that:
 
 - Are compatible with ARM64 and run well on Graviton
 - Can run in containers and integrate into the AWS ecosystem
 
-[NGINX Plus](https://www.f5.com/go/faq/nginx-faq) fits the bill!
+[F5 NGINX Plus](https://www.f5.com/go/faq/nginx-faq) fits the bill!
 
 ## Introduction
-**NGINX Plus**, the commercial version of the popular open-source NGINX reverse proxy / Kubernetes ingress / application server, offers advanced features crucial for modern cloud architectures. NGINX Plus can effectively replace Amazon's native load balancers and [serve as a more feature-rich alternative to Elastic Kubernetes Services Ingress](https://github.com/nginxinc/kubernetes-ingress). Its versatility supports all cloud-native design patterns and seamlessly integrates with the AWS ecosystem.
+**F5 NGINX Plus**, the commercial version of the popular open-source NGINX reverse proxy / Kubernetes ingress / application server, offers advanced features crucial for modern cloud architectures. NGINX Plus can effectively replace Amazon's native load balancers and [serve as a more feature-rich alternative to Elastic Kubernetes Services Ingress](https://github.com/nginxinc/kubernetes-ingress). Its versatility supports all cloud-native design patterns and seamlessly integrates with the AWS ecosystem.
 
 This tutorial leverages several AWS technologies:
 
