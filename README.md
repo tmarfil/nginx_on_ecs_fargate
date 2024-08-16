@@ -1,6 +1,6 @@
 # Deploying NGINX Plus Graviton-powered containers as AWS ECS Fargate Tasks
 
-Amazon's new cloud computing chip, [Graviton4]((https://www.aboutamazon.com/news/aws/graviton4-aws-cloud-computing-chip), is now generally available (July 2024). The price-performance ratio is impressive. Understandably, cloud architects are looking for solutions that:
+Amazon's new cloud computing chip, [Graviton4](https://www.aboutamazon.com/news/aws/graviton4-aws-cloud-computing-chip), is now generally available (July 2024). The price-performance ratio is impressive. Understandably, cloud architects are looking for solutions that:
 
 - Are compatible with ARM64 and run well on Graviton
 - Can run in containers and integrate into the AWS ecosystem
