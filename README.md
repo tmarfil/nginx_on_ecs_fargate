@@ -5,10 +5,10 @@ Amazon's new cloud computing chip, [Graviton4](https://www.aboutamazon.com/news/
 - Are compatible with ARM64 and run well on Graviton
 - Can run in containers and integrate into the AWS ecosystem
 
-[F5 NGINX Plus](https://www.f5.com/go/faq/nginx-faq) fits the bill!
+[NGINX Plus](https://www.f5.com/go/faq/nginx-faq) fits the bill!
 
 ## Introduction
-**F5 NGINX Plus**, the commercial version of the popular open-source NGINX reverse proxy / Kubernetes ingress / application server, offers advanced features crucial for modern cloud architectures. NGINX Plus can effectively replace Amazon's native load balancers and [serve as a more feature-rich alternative to Elastic Kubernetes Services Ingress](https://github.com/nginxinc/kubernetes-ingress). Its versatility supports all cloud-native design patterns and seamlessly integrates with the AWS ecosystem.
+**NGINX Plus**, the commercial version of the popular open-source NGINX reverse proxy / Kubernetes ingress / application server, offers advanced features crucial for modern cloud architectures. NGINX Plus can effectively replace Amazon's native load balancers and [serve as a more feature-rich alternative to Elastic Kubernetes Services Ingress](https://github.com/nginxinc/kubernetes-ingress). Its versatility supports all cloud-native design patterns and seamlessly integrates with the AWS ecosystem.
 
 This tutorial leverages several AWS technologies:
 
