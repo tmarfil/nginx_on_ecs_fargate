@@ -1,4 +1,4 @@
-# Deploying F5 NGINX Plus Graviton-powered containers as AWS ECS Fargate Tasks
+# Deploying F5 NGINX Plus Graviton-powered Containers as AWS ECS Fargate Tasks
 
 Amazon's new cloud computing chip, [Graviton4](https://www.aboutamazon.com/news/aws/graviton4-aws-cloud-computing-chip), is now generally available (July 2024). The price-performance ratio is impressive. Understandably, cloud architects are looking for solutions that:
 
