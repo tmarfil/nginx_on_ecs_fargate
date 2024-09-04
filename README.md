@@ -8,7 +8,7 @@ Amazon's new cloud computing chip, [Graviton4](https://www.aboutamazon.com/news/
 [NGINX Plus](https://www.f5.com/go/faq/nginx-faq) fits the bill!
 
 ## Introduction
-**NGINX Plus**, the commercial version of the popular open-source NGINX reverse proxy / Kubernetes ingress / application server, offers advanced features crucial for modern cloud architectures. NGINX Plus can effectively replace Amazon's native load balancers and [serve as a more feature-rich alternative to Elastic Kubernetes Services Ingress](https://github.com/nginxinc/kubernetes-ingress). Its versatility supports all cloud-native design patterns and seamlessly integrates with the AWS ecosystem.
+**NGINX Plus**, the commercial version of the popular open-source NGINX reverse proxy / Kubernetes ingress / application server, offers advanced features crucial for modern cloud architectures. NGINX Plus can effectively replace Amazon's native load balancers and [serve as a more feature-rich alternative to Elastic Kubernetes Service Ingress](https://github.com/nginxinc/kubernetes-ingress). Its versatility supports all cloud-native design patterns and seamlessly integrates with the AWS ecosystem.
 
 This tutorial leverages several AWS technologies:
 
@@ -20,7 +20,7 @@ This tutorial leverages several AWS technologies:
 
 What is the difference between ECS and ECS Fargate?
 
-The key difference between AWS ECS (Elastic Container Service) and AWS ECS Fargate lies in the level of infrastructure management:
+The key difference between AWS ECS and AWS ECS Fargate lies in the level of infrastructure management:
 
 - AWS ECS:
    - You manage the underlying EC2 instances that host your containers
@@ -119,7 +119,7 @@ SG_ID=$(aws ec2 create-security-group --vpc-id $VPC_ID --group-name docker-clien
 echo "Security Group ID: $SG_ID"
 
 # Allow SSH access from your IP
-aws ec2 authorize-security-group-ingress --group-id $SG_ID --protocol tcp --port 22 --cidr YOUR_IP_ADDRESS/32
+aws ec2 authorize-security-group-ingress --group-id $SG_ID --protocol tcp --port 22 --cidr $YOUR_IP_ADDRESS/32
 
 # Allow HTTP and HTTPS access from anywhere
 aws ec2 authorize-security-group-ingress --group-id $SG_ID --protocol tcp --port 80 --cidr 0.0.0.0/0
@@ -151,7 +151,7 @@ echo "AMI ID: $AMI_ID"
 INSTANCE_ID=$(aws ec2 run-instances \
     --image-id $AMI_ID \
     --instance-type t4g.micro \
-    --key-name YOUR_KEY_NAME \
+    --key-name $YOUR_KEY_NAME \
     --security-group-ids $SG_ID \
     --subnet-id $SUBNET1_ID \
     --user-data '#!/bin/bash
@@ -166,7 +166,7 @@ usermod -a -G docker ec2-user' \
 echo "Instance ID: $INSTANCE_ID"
 ```
 
-Watch for progress in the AWS console. EC2 => Instances => "Name = Graviton-Docker-Instance". Once Status check passses (green font) you can proceed.
+Watch for progress in the AWS console. EC2 => Instances => "Name = Graviton-Docker-Instance". Once Status check passes (green font) you can proceed.
 
 #### 2.3 Get the public IP address of the instance
 
@@ -820,4 +820,4 @@ This completes our tutorial on building and deploying NGINX Plus ARM64 container
 
 Remember to clean up your AWS resources when you're done to avoid unnecessary charges.
 
-> **Note** > [NGINX App Protect,](https://www.f5.com/products/nginx/nginx-app-protect) the NGINX Web Application Firewall, is only available for x86 as of August 2024.
+> **Note** > [NGINX App Protect,](https://www.f5.com/products/nginx/nginx-app-protect) the NGINX Web Application Firewall, is _not_ compatible with Graviton (ARM64) as of August 2024.
