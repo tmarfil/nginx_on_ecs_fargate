@@ -8,7 +8,7 @@ Amazon's new cloud computing chip, [Graviton4](https://www.aboutamazon.com/news/
 [NGINX Plus](https://www.f5.com/go/faq/nginx-faq) fits the bill!
 
 ## Introduction
-**NGINX Plus**, the commercial version of the popular open-source NGINX reverse proxy / Kubernetes ingress / application server, offers advanced features crucial for modern cloud architectures. NGINX Plus can effectively replace Amazon's native load balancers and [serve as a more feature-rich alternative to Elastic Kubernetes Service Ingress](https://github.com/nginxinc/kubernetes-ingress). Its versatility supports all cloud-native design patterns and seamlessly integrates with the AWS ecosystem.
+**NGINX Plus**, the commercial version of the popular open-source NGINX reverse proxy / Kubernetes ingress / application server, offers advanced features crucial for modern cloud architectures. NGINX Plus can effectively replace Amazon's native load-balancers and [serve as a more feature-rich alternative to Elastic Kubernetes Service Ingress](https://github.com/nginxinc/kubernetes-ingress). Its versatility supports all cloud-native design patterns and seamlessly integrates with the AWS ecosystem.
 
 This tutorial leverages several AWS technologies:
 
